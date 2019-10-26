@@ -12,4 +12,8 @@
 - After validation they will be taken to a "Services" page where customers can book appointments, request services, and see what is available. They will then be given the option to pay online using the Square API, or pay at the time of their appointment. Appointments booked will be added to a table that contains their user.name / a description of the service requested / date & time of appt. / and cost.
 This table will be managed by GET, POST, & CRUD functions powered by an Express server. Admin will also be given special privileges on this page and the ability to control certain functionality.
 
+
 - These will be the three main components of Amplify with further customization and additional page options available upon request.
+=======
+- These will be the three main components of Amplify with further customization and additional page options available upon request.
+
