@@ -1,6 +1,6 @@
-import React from 'react'
-import Login from "Login"
-import Registration from "Registration"
+import React, { Component } from 'react'
+import Login from "./Login.js"
+import Registration from "./Registration.js"
 
 export default class Home extends Component {
     constructor(props) {
@@ -18,8 +18,9 @@ export default class Home extends Component {
         return (
             <div>
                 <h1>Home</h1>
-                <h1>Status: {this.props.loggedInStatus}</h1>
+                <h1>{this.props.loggedInStatus}</h1>
                 <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
+                <br></br>
                 <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
             </div>
         )
@@ -27,4 +28,5 @@ export default class Home extends Component {
 
 
 }
+
 
