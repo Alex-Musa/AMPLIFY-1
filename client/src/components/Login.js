@@ -4,6 +4,8 @@ import { loginUser } from '../actions';
 import Navbar from '../utils/Navbar';
 import Carousel from '../utils/Carousel'
 
+
+
 class LogIn extends Component {
 
     onLogIn = (e) => {
@@ -16,8 +18,11 @@ class LogIn extends Component {
     render() {
         return (
 
+
             <div className="container">
+
                 <Navbar />
+
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
                         <form onSubmit={this.onLogIn} className="form-signin">
@@ -29,12 +34,17 @@ class LogIn extends Component {
                             <div className="form-label-group mb-2">
                                 <input type="email" id="inputEmail" className="form-control" placeholder="Username (anything will do)" autoFocus />
                             </div>
+
+
+
                             <Carousel />
+
                             <button className="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
                         </form>
                     </div>
                 </div>
             </div>
+
         );
     }
 }

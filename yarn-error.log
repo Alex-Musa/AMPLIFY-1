@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add todo.model
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add Jumbotron
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\evans\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\evans\AppData\Local\Microsoft\WindowsApps;C:\Users\evans\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\evans\AppData\Roaming\npm;C:\Users\evans\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/todo.model: Not found
+  Error: https://registry.yarnpkg.com/Jumbotron: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66035:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140564:22)
       at Request.emit (events.js:198:13)
@@ -60,6 +60,7 @@ npm manifest:
       "react": "^16.11.0",
       "react-dom": "^16.11.0",
       "redux-thunk": "^2.3.0",
+      "todo": "^1.1.0",
       "tooltip.js": "^1.3.3",
       "typescript": "*"
     }
@@ -130,6 +131,11 @@ Lockfile:
     dependencies:
       delegates "^1.0.0"
       readable-stream "^2.0.6"
+  
+  argvee@~0.1.1:
+    version "0.1.1"
+    resolved "https://registry.yarnpkg.com/argvee/-/argvee-0.1.1.tgz#d90e87a4429d1e8a3a73e638a242fbea5cf60cb3"
+    integrity sha1-2Q6HpEKdHoo6c+Y4okL76lz2DLM=
   
   arr-diff@^4.0.0:
     version "4.0.0"
@@ -789,6 +795,11 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  eyehurt@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/eyehurt/-/eyehurt-0.0.1.tgz#a157b04fa6aca88b1e3171bbb2fba8089c1c63f2"
+    integrity sha1-oVewT6asqIseMXG7svuoCJwcY/I=
+  
   fill-range@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
@@ -1003,6 +1014,11 @@ Lockfile:
     dependencies:
       is-number "^3.0.0"
       kind-of "^4.0.0"
+  
+  homepath@~1.0.0:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/homepath/-/homepath-1.0.1.tgz#a8367abb0632fbe0de6f97b542803fe7426bc6dd"
+    integrity sha1-qDZ6uwYy++Deb5e1QoA/50Jrxt0=
   
   hosted-git-info@^2.1.4:
     version "2.8.5"
@@ -1616,6 +1632,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
     integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
   
+  ms@~0.6.2:
+    version "0.6.2"
+    resolved "https://registry.yarnpkg.com/ms/-/ms-0.6.2.tgz#d89c2124c6fdc1353d65a8b77bf1aac4b193708c"
+    integrity sha1-2JwhJMb9wTU9Zai3e/GqxLGTcIw=
+  
   nan@^2.12.1:
     version "2.14.0"
     resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
@@ -2111,6 +2132,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
     integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
   
+  refractory@0.0.3:
+    version "0.0.3"
+    resolved "https://registry.yarnpkg.com/refractory/-/refractory-0.0.3.tgz#8d2f8209d3836bf1f47b1cc2e81367b914fbf0d5"
+    integrity sha1-jS+CCdODa/H0exzC6BNnuRT78NU=
+  
   regenerator-runtime@^0.10.5:
     version "0.10.5"
     resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
@@ -2592,6 +2618,17 @@ Lockfile:
       extend-shallow "^3.0.2"
       regex-not "^1.0.2"
       safe-regex "^1.1.0"
+  
+  todo@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/todo/-/todo-1.1.0.tgz#47658e84f9723dc289dbb719830bf6504b31e0f4"
+    integrity sha1-R2WOhPlyPcKJ27cZgwv2UEsx4PQ=
+    dependencies:
+      argvee "~0.1.1"
+      eyehurt "0.0.1"
+      homepath "~1.0.0"
+      ms "~0.6.2"
+      refractory "0.0.3"
   
   toidentifier@1.0.0:
     version "1.0.0"
