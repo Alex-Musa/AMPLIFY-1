@@ -13,7 +13,7 @@ function carousel() {
 
     return (
         <div className="test">
-            <h1 style={emblem}><bold>Prestige Hair Studios</bold></h1>
+            <h1 style={emblem}>Prestige Hair Studios</h1>
             <Carousel>
                 <img src={scorpion} alt="..." style={styles} />
                 <img src={scorpion} alt="..." style={styles} />
