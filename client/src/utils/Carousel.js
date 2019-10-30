@@ -1,33 +1,27 @@
 import React from 'react'
-import logo from "./images/scorpion.jpg"
-
-function Carousel() {
-    return (
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-
-            <img src={logo} class="d-block w-100" alt="..." />
+import Carousel from 'react-bootstrap/Carousel';
+import scorpion from "./images/scorpion.jpg"
+import styles from "../utils/styles/Carousel.css"
 
 
-            <img src={logo} class="d-block w-100" alt="..." />
-
-
-            <img src={logo} class="d-block w-100" alt="..." />
-
-
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    )
-
-
-
+const emblem = {
+    marginLeft: "100px"
 }
 
 
-export default Carousel
+function carousel() {
+
+    return (
+        <div className="test">
+            <h1 style={emblem}><bold>Prestige Hair Studios</bold></h1>
+            <Carousel>
+                <img src={scorpion} alt="..." style={styles} />
+                <img src={scorpion} alt="..." style={styles} />
+                <img src={scorpion} alt="..." style={styles} />
+            </Carousel>
+        </div>
+    )
+}
+
+
+export default carousel
