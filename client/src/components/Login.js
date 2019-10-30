@@ -1,74 +1,52 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { loginUser } from '../actions';
+import Navbar from '../utils/Navbar';
+import Carousel from '../utils/Carousel'
 
-export default class Login extends Component {
-    constructor(props) {
-        super(props);
+class LogIn extends Component {
 
-        this.state = {
-            email: "",
-            password: "",
-            loginErrors: ""
-        };
+    onLogIn = (e) => {
+        e.preventDefault();
 
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        // normally you would pass in the login credentials to the login action
+        this.props.loginUser();
     }
 
-    handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    }
-    handleSubmit(event) {
-        const { email, password } = this.state;
-
-        axios
-            .post(
-                "http://localhost:3001/sessions",
-                {
-                    user: {
-                        email: email,
-                        password: password
-                    }
-                },
-                { withCredentials: true }
-            )
-            .then(response => {
-                if (response.data.logged_in) {
-                    this.props.handleSuccessfulAuth(response.data);
-                }
-            })
-            .catch(error => {
-                console.log("login error", error);
-            });
-        event.preventDefault();
-    }
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        required />
 
+            <div className="container">
+                <Navbar />
+                <div className="row">
+                    <div className="col-md-6 offset-md-3">
+                        <form onSubmit={this.onLogIn} className="form-signin">
+                            <div className="text-center mb-4 mt-5">
+                                <h1 className="h3 mb-3 font-weight-normal">Appointment Manager</h1>
+                                <p>Please enter your email address or username and click Log in</p>
+                            </div>
 
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                        required />
-
-                    <button type="submit">Login</button>
-                </form>
+                            <div className="form-label-group mb-2">
+                                <input type="email" id="inputEmail" className="form-control" placeholder="Username (anything will do)" autoFocus />
+                            </div>
+                            <Carousel />
+                            <button className="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        user: state.auth.user,
+        error: state.auth.error,
+        loading: state.auth.loading
+    }
+};
+
+export default connect(mapStateToProps, {
+    loginUser
+})(LogIn);
