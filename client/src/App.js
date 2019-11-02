@@ -9,7 +9,11 @@ import reducers from './reducers';
 import history from './modules/history';
 import Home from './components/Home';
 import LogIn from './components/Login';
+
+
+=======
 import stylist from './utils/stylist'
+
 import Carousel from './utils/Carousel'
 import Navbar from "./utils/Navbar"
 import './App.css';
