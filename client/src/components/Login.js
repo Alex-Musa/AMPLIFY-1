@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loginUser } from '../actions';
 import Navbar from '../utils/Navbar';
 import Carousel from '../utils/Carousel'
-
+import "../utils/styles/login.css"
 
 
 class LogIn extends Component {
@@ -24,22 +24,23 @@ class LogIn extends Component {
                 <Navbar />
 
                 <div className="row">
+
                     <div className="col-md-6 offset-md-3">
                         <form onSubmit={this.onLogIn} className="form-signin">
                             <div className="text-center mb-4 mt-5">
                                 <h1 className="h3 mb-3 font-weight-normal">Appointment Manager</h1>
-                                <p>Please enter your email address or username and click Log in</p>
+                                <p>Please enter your email address or username to Log in</p>
                             </div>
 
                             <div className="form-label-group mb-2">
-                                <input type="email" id="inputEmail" className="form-control" placeholder="Username (anything will do)" autoFocus />
+                                <input type="email" id="inputEmail" className="form-control" placeholder="Username (Email)" autoFocus />
                             </div>
 
 
 
                             <Carousel />
 
-                            <button className="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+                            <button className="btn btn-lg btn-primary btn-block" type="submit" id="button">Log in</button>
                         </form>
                     </div>
                 </div>
