@@ -10,6 +10,10 @@ import history from './modules/history';
 import Home from './components/Home';
 import LogIn from './components/Login';
 
+
+=======
+import stylist from './utils/stylist'
+
 import Carousel from './utils/Carousel'
 import Navbar from "./utils/Navbar"
 import './App.css';
@@ -19,17 +23,20 @@ class App extends Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
     return (
-      <Provider store={store}>
-        <Router history={history}>
-          <Switch>
-            <Route path="/home" component={Home} />
-            <Route path="/login" component={LogIn} />
-            <Redirect from="/" to="login" />
-            <Carousel />
-            <Navbar />
-          </Switch>
-        </Router>
-      </Provider>
+      <div className="App">
+        <Provider store={store}>
+          <Router history={history}>
+            <Switch>
+              <Route path="/home" component={Home} />
+              <Route path="/login" component={LogIn} />
+              <Route path="/stylist" component={stylist} />
+              <Redirect from="/" to="login" />
+              <Carousel />
+              <Navbar />
+            </Switch>
+          </Router>
+        </Provider>
+      </div>
     );
   }
 }
